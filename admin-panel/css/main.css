@@ -384,10 +384,9 @@ body {
         box-shadow: 1px 1px 5px #696969;
         
     }
-.stats-list__item_users::before {
+.stats-list__item::before {
     position: absolute;
     content: '';
-    background-image: url('/Frontend/web-test/admin-panel/img/__main/users.svg');
     background-repeat: no-repeat;
     background-position: 50%;
     top: 40px;
@@ -395,42 +394,18 @@ body {
     margin-left: -15px;
     width: 30px;
     height: 30px;
-    
+}
+.stats-list__item_users::before {
+    background-image: url('/Frontend/web-test/admin-panel/img/__main/users.svg');
 }
 .stats-list__item_notification::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__main/notifications.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    top: 40px;
-    left: 50%;
-    margin-left: -15px;
-    width: 30px;
-    height: 30px;
-
 }
 .stats-list__item_comments::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__main/comments.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    top: 40px;
-    left: 50%;
-    margin-left: -15px;
-    width: 30px;
-    height: 30px;
-
 }
 .stats-list__item_views::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__main/views.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    top: 40px;
-    left: 50%;
     margin-left: -17.5px;
     width: 35px;
     height: 30px;
