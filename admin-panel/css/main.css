@@ -28,8 +28,9 @@ body {
 .animation_hide {
     opacity: 0;
     transform: translate(-110%);
-    display: none;
-    transition: all 0.5s ease-in;
+    
+    transition: all 0.2s ease-in;
+    position: absolute;
 }
   
 /* SIDEBAR STYLE */
@@ -180,11 +181,13 @@ body {
     .main__header > .header__title:hover {
         cursor: pointer;
         color: #293b5a;
+        transition: all 0.25s ease-in;
     }
 
 /* HEADER FOR JS */
 
-.side-in::after {
+.side-in::after,
+.side-in::before {
     position: absolute;
     content: '';
     width: 30px;
@@ -194,26 +197,22 @@ body {
     top: 10px;
     margin-left: -15px;
     transform: rotate(45deg);
-    transition: all 0.5s ease-in;
+    transition: all 0.25s ease-in;
   }
   .side-in::before {
-    position: absolute;
-    content: '';
-    width: 30px;
-    height: 3px;
-    background-color: #4b4b4b;
-    left: 50px;
-    top: 10px;
-    margin-left: -15px;
     transform: rotate(-45deg);
-    transition: all 0.5s ease-in;
   }
+.side-in:hover::after,
+.side-in:hover::before {
+    background-color: deeppink;
+}
 
 /************************/
 
 .side-in-hover { 
 }
-.side-in-hover::after {
+.side-in-hover::after,
+.side-in-hover::before {
   position: absolute;
   content: '';
   width: 20px;
@@ -222,27 +221,17 @@ body {
   left: 50px;
   top: 5px;
   margin-left: -15px;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 }
 .side-in-hover::before {
-  position: absolute;
-  content: '';
-  width: 20px;
-  height: 3px;
-  background-color: #4b4b4b;
-  left: 50px;
   top: 18px;
-  margin-left: -15px;
-  transition: all 0.5s ease-in;
 }
-.side-in-hover:hover::after {
-  background-color: deeppink;
-  transition: all 0.5s ease-in;
-}
+.side-in-hover:hover::after,
 .side-in-hover:hover::before {
   background-color: deeppink;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 }
+
 
 /* ******************************* */
 
