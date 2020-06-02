@@ -1,0 +1,245 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.flex-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+/* SIDEBAR STYLE */
+
+.sidebar-menu {
+    min-height: 100vh;
+    background-color: #293b5a;
+}
+.sidebar-menu__logo {
+    background-color: #21324f;
+    padding: 45px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-menu__logo img {
+
+}
+.sidebar-menu__nav {
+    color: #7b96c4;
+    font-size: 14px;
+    line-height: 14.4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+}
+.nav-list__item {
+    margin-top: 60px;
+    padding-right: 60px;
+    padding-left: 50px;
+
+    transition: all 0.2s ease-in;
+}
+.nav-list__item.active {
+    color: #55e4d4;
+}
+.nav-list__item:hover {
+    color: #55e4d4;
+    cursor: pointer;
+}
+.nav-list__item_dashboard {
+}
+.nav-list__item_feed {
+}
+.nav-list__item_statistics {
+}
+.nav-list__item_teams {
+}
+.nav-list__item_projects {
+}
+.nav-list__item_settings {
+}
+.sidebar-menu__export {
+}
+
+/* MAIN SCREEN STYLE */
+
+.main {
+    flex-grow: 1;
+    background-color: #ffffff;
+    max-width: 1250px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.main__header {
+    background-color: #e1ecff;
+    width: 100%;
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__title {
+    color: #7b96c4;
+    font-size: 24px;
+    font-weight: 700;
+    flex-grow: 1;
+    padding-left: 73px;
+}
+.button{
+    width: 175px;
+    height: 41px;
+    border-radius: 35px;
+    border: none;
+}
+.header__button {
+    color: #ffffff;
+    background: #3dcb35;
+}
+.header__notification {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.notification__item {
+}
+.header__profile {
+}
+.profile__img {
+}
+.profile__name {
+}
+.main__section {
+    flex-grow: 1;
+}
+.statistics-section {
+    margin-top: 50px;
+}
+.statistics-section__header {
+    padding: 0;
+    padding-left: 30px;
+}
+.statistics-section__header select {
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+.statistics-section__header h1 {
+    color: #293b5a;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 14.4px;
+    padding: 0;
+}
+.header__date {
+}
+.header__select {
+}
+.statistics-section_chart {
+}
+.statistics-section__stats {
+}
+.stats-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0;
+
+    font-size: 24px;
+    text-align: center;
+}
+.stats-list__item {
+    list-style: none;
+}
+.stats-list__item_users {
+}
+.item__title {
+    color: #97abcd;
+    font-size: 24px;
+    margin: 0;
+}
+.item__value {
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-size: 36px;
+    position: relative;
+}
+.item__value::before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid coral;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -8px;
+    top: -30px;
+}
+.item__value_users {
+    color: #4ad8b6;
+} {
+}
+.item__value_notifications {
+    color: #ff5d87;
+}
+.item__value_comments {
+    color: #99adce;
+}
+.item__value_views {
+    color: #4ad8b6;
+}
+
+.stats-list__item.stats-list__item_notification {
+}
+.stats-list__item.stats-list__item_comments {
+}
+.stats-list__item.stats-list__item_views {
+}
+.main__sidebar-personal {
+    flex-grow: 1;
+    max-width: 255px;
+    min-height: 100vh;
+    background-color: #f4f8ff;
+}
+
+.sidebar-personal__recent-activity {
+}
+.recent-activity-list {
+    margin: 0;
+    padding: 0;
+}
+.recent-activity-list__item {
+    list-style: none;
+}
+.sidebar-personal__title {
+    color: #c5d1e6;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.user.user-name {
+}
+.user-name_activity {
+    
+}
+.sidebar-personal__team {
+}
+.team-list {
+    margin: 0;
+    padding: 0;
+}
+.team-list__item {
+    list-style: none;
+}
+.user-name_status {
+}
