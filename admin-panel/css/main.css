@@ -5,8 +5,9 @@ body {
 
 .flex-container {
     display: flex;
-    /* flex-wrap: wrap; */
 }
+/* Service selectors */
+
 .button {
     width: 175px;
     height: 41px;
@@ -23,7 +24,13 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
-  }
+}
+.animation_hide {
+    opacity: 0;
+    transform: translate(-110%);
+    display: none;
+    transition: all 0.5s ease-in;
+}
   
 /* SIDEBAR STYLE */
 
@@ -39,8 +46,8 @@ body {
     align-items: center;
 }
 .sidebar-menu__logo img {
-
 }
+
 .sidebar-menu__nav {
     color: #7b96c4;
     font-size: 14px;
@@ -174,80 +181,70 @@ body {
         cursor: pointer;
         color: #293b5a;
     }
-    .main__header > .header__title::before {
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: #4b4b4b;
-        left: 30px;
-        top: 0px;
-    }
-    .main__header > .header__title::after {
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: #4b4b4b;
-        left: 30px;
-        top: 10px;
-        box-shadow: 0px 10px 0px #4b4b4b;
-        transition: all 250ms ease-in;
-    }
-        .main__header > .header__title:hover::before,
-        .main__header > .header__title:hover::after {
-            background-color: red;
-            box-shadow: 0px 0px 0px red;
-        }
-        .main__header > .header__title:hover::before {
-            transform: rotate(-45deg);
-            top: 10px;
-        }
-        .main__header > .header__title:hover::after {
-            transform: rotate(45deg);
-        }
 
-.main__header > .header__title::before {
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: #4b4b4b;
-        left: 30px;
-        top: 0px;
-    }
-    .main__header > .header__title::after {
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: #4b4b4b;
-        left: 30px;
-        top: 10px;
-        box-shadow: 0px 10px 0px #4b4b4b;
-        transition: all 250ms ease-in;
-    }
+/* HEADER FOR JS */
 
-/* Подумать как вено оформить селекторы при показанном сайдбаре
-и когда сайдбар спртан. Чтобы верные состояния псевдоэлементов были к месту.*/
-/* 
-.main__header > .header__title_no-hover:hover::before,
-.main__header > .header__title_no-hover:hover::after {
-    background-color: #4b4b4b;
-
+.side-in::after {
     position: absolute;
     content: '';
     width: 30px;
     height: 3px;
     background-color: #4b4b4b;
-    left: 30px;
+    left: 50px;
     top: 10px;
-    box-shadow: 0px 10px 0px #4b4b4b;
-    transform: translate(0,0) rotate(0deg);
-    transition: all 250ms ease-in;  
-} */
-/* */
+    margin-left: -15px;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in;
+  }
+  .side-in::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #4b4b4b;
+    left: 50px;
+    top: 10px;
+    margin-left: -15px;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-in;
+  }
 
+/************************/
+
+.side-in-hover { 
+}
+.side-in-hover::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 3px;
+  background-color: #4b4b4b;
+  left: 50px;
+  top: 5px;
+  margin-left: -15px;
+  transition: all 0.5s ease-in;
+}
+.side-in-hover::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 3px;
+  background-color: #4b4b4b;
+  left: 50px;
+  top: 18px;
+  margin-left: -15px;
+  transition: all 0.5s ease-in;
+}
+.side-in-hover:hover::after {
+  background-color: deeppink;
+  transition: all 0.5s ease-in;
+}
+.side-in-hover:hover::before {
+  background-color: deeppink;
+  transition: all 0.5s ease-in;
+}
+
+/* ******************************* */
 
 .header__button {
     color: #ffffff;
