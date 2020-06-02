@@ -7,7 +7,16 @@ body {
     display: flex;
     /* flex-wrap: wrap; */
 }
-
+.button {
+    width: 175px;
+    height: 41px;
+    font-size: 14px;
+    border-radius: 20.5px;
+    border: none;
+}
+.button:hover {
+    cursor: pointer;
+}
 /* SIDEBAR STYLE */
 
 .sidebar-menu {
@@ -38,13 +47,13 @@ body {
     justify-content: center;
 
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 .nav-list__item {
     margin-top: 60px;
     padding-right: 60px;
     padding-left: 50px;
-
+    position: relative;
     transition: all 0.2s ease-in;
 }
 .nav-list__item.active {
@@ -54,19 +63,74 @@ body {
     color: #55e4d4;
     cursor: pointer;
 }
-.nav-list__item_dashboard {
+.nav-list__item_dashboard::before {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/dashboard.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -5px;
 }
-.nav-list__item_feed {
+.nav-list__item_feed::before {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/feed.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -5px;
 }
-.nav-list__item_statistics {
+.nav-list__item_statistics::before {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/stats.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -5px;
 }
-.nav-list__item_teams {
+.nav-list__item_teams::before {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/teams.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -5px;
 }
-.nav-list__item_projects {
+.nav-list__item_projects::before {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/projects.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -5px;
 }
-.nav-list__item_settings {
+.nav-list__item_settings::before {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/settings.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -5px;
 }
-.sidebar-menu__export {
+.sidebar-menu__export::before {
+
 }
 
 /* MAIN SCREEN STYLE */
@@ -74,7 +138,7 @@ body {
 .main {
     flex-grow: 1;
     background-color: #ffffff;
-    max-width: 1250px;
+    /* max-width: 1250px; */
 
     display: flex;
     flex-wrap: wrap;
@@ -97,12 +161,7 @@ body {
     flex-grow: 1;
     padding-left: 73px;
 }
-.button{
-    width: 175px;
-    height: 41px;
-    border-radius: 35px;
-    border: none;
-}
+
 .header__button {
     color: #ffffff;
     background: #3dcb35;
@@ -111,15 +170,66 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    margin-right: 80px;
 }
 .notification__item {
+    list-style: none;
+    padding: 0 30px;
+    transition: all 0.2s ease-in-out;
+    width: 30px;
+}
+.notification__item:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.notification__item_bell {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__header-img/bell.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+.notification__item_bell::before {
+    position: absolute;
+    content: '';
+    background-color: red;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    right: 30px;
+    top: -4px;
+}
+.notification__item_message {
+    position: absolute;
+    content: '';
+    background-image: url('/Frontend/web-test/admin-panel/img/__header-img/message.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    left: 40px;
 }
 .header__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
 }
 .profile__img {
+    border-radius: 50%;
 }
 .profile__name {
+    color: #7b96c4;
+    font-size: 14px;
+    padding-left: 20px;
+    align-self: center;
 }
+
+/* APP SECTION SCREEN STYLE */
+
 .main__section {
     flex-grow: 1;
 }
@@ -129,11 +239,14 @@ body {
 .statistics-section__header {
     padding: 0;
     padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.statistics-section__header select {
-    border-radius: 30px;
-    padding: 10px 30px;
-}
+    .title__wraper {
+        flex-grow: 1;
+    }
+
 .statistics-section__header h1 {
     color: #293b5a;
     font-size: 36px;
@@ -142,10 +255,24 @@ body {
     padding: 0;
 }
 .header__date {
+    color: #97abcd;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 12px;
 }
 .header__select {
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin-left: 30px;
 }
+    select:last-child {
+        margin-right: 30px;
+    }
 .statistics-section_chart {
+}
+.chart {
+    background-color: #696969;
+    height: 360px;
 }
 .statistics-section__stats {
 }
@@ -211,6 +338,8 @@ body {
     max-width: 255px;
     min-height: 100vh;
     background-color: #f4f8ff;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-personal__recent-activity {
@@ -225,12 +354,24 @@ body {
 .sidebar-personal__title {
     color: #c5d1e6;
     font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25px;
     text-transform: uppercase;
 }
-.user.user-name {
+.user {
+    padding-left: 80px;
+    margin-top: 30px;
 }
-.user-name_activity {
-    
+.user-name {
+    color: #7b96c4;
+    font-size: 14px;
+    line-height: 18px;
+}
+.user-name_activity,
+.user-name_status {
+    color: #a9bde0;
+    font-size: 12px;
 }
 .sidebar-personal__team {
 }
@@ -241,5 +382,18 @@ body {
 .team-list__item {
     list-style: none;
 }
-.user-name_status {
+.button_gray {
+    color: #c5d1e6;
+    font-size: 14px;
+    background-color: #ffffff;
+    align-self: center;
+    margin-top: 50px;
+    transition: all 250ms ease-in;
+}
+.button_gray:hover {
+    color: #c5d1e6;
+    font-size: 14px;
+    background-color: #000000;
+    align-self: center;
+    margin-top: 50px;
 }
