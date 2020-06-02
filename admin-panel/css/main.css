@@ -79,71 +79,34 @@ body {
     color: #55e4d4;
     cursor: pointer;
 }
-.nav-list__item_dashboard::before {
+.nav-list__item::before {
     position: absolute;
     content: '';
-    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/dashboard.svg');
     background-repeat: no-repeat;
     background-position: 50%;
     width: 25px;
     height: 25px;
     left: 15px;
     bottom: -5px;
+}
+.nav-list__item_dashboard::before {
+    background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/dashboard.svg');
 }
 .nav-list__item_feed::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/feed.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 25px;
-    height: 25px;
-    left: 15px;
-    bottom: -5px;
 }
 .nav-list__item_statistics::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/stats.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 25px;
-    height: 25px;
-    left: 15px;
-    bottom: -5px;
 }
 .nav-list__item_teams::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/teams.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 25px;
-    height: 25px;
-    left: 15px;
-    bottom: -5px;
 }
 .nav-list__item_projects::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/projects.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 25px;
-    height: 25px;
-    left: 15px;
-    bottom: -5px;
 }
 .nav-list__item_settings::before {
-    position: absolute;
-    content: '';
     background-image: url('/Frontend/web-test/admin-panel/img/__sidebar/settings.svg');
-    background-repeat: no-repeat;
-    background-position: 50%;
-    width: 25px;
-    height: 25px;
-    left: 15px;
-    bottom: -5px;
+
 }
 .sidebar-menu__export::before {
 
