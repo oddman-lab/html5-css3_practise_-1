@@ -25,10 +25,10 @@
         <section class="container main">
             <h1 class="main__title">Reserve a boat now!</h1>
             <p class="main__subtitle">and set your sails into paradise</p>   
-            <form action="" class="main__search-form">
+            <form action="" class="form search-form">
                 <input type="text" class="search-form__input" id="search">
                 <label class="search-form__label" for="search">
-                    <button class="button button_icon">Find a boat</button>
+                    <button class="button button_icon button_red">Find a boat</button>
                 </label>
             </form>
             <ul class="main__feature-list">
@@ -76,7 +76,7 @@
                         <p class="card__country">Monaco</p>
                     </li>
                 </ul>
-                <button class="button destination__button">Explore more destinations</button>
+                <button class="button button_white-gray">Explore more destinations</button>
             </section>
         </section>
     </div>
@@ -86,9 +86,50 @@
         <section class="lease-boat container">
             <h3 class="lease-boat__title">Have your own boat?</h3>
             <p class="lease-boat__subtitle">Navigare necesse est, vivere non est necesse</p>
-            <button class="button lease-boat__button">Make money with your boat</button>
+            <button class="button button_red">Make money with your boat</button>
         </section>
     </div>
 </section>
+<section class="featured-boats">
+    <h4 class="featured-boats__title">Featured boats</h4>
+    <p class="featured-boats__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <section class="featured-boats__cards">
+        <ul class="boats-cards__list">
+            <li class="boats-card__item boat">
+                <p class="boat__name-title">Delphia 47</p>
+                <p class="boat__location">Gdańsk, Poland</p>
+                <p class="boat__capacity">8 Berths</p>
+            </li>
+            <li class="boats-card__item boat">
+                <p class="boat__name-title">Sense 55</p>
+                <p class="boat__location">Portofino, Italy</p>
+                <p class="boat__capacity">12 Berths</p>
+            </li>
+            <li class="boats-card__item boat">
+                <p class="boat__name-title">Crusier 51</p>
+                <p class="boat__location">Palma de Mallorca, Spain</p>
+                <p class="boat__capacity">10 Berths</p>
+            </li>
+            <li class="boats-card__item boat">
+                <p class="boat__name-title">Crusier 41s</p>
+                <p class="boat__location">Lisbon, Portugal</p>
+                <p class="boat__capacity">8 Berths</p>
+            </li>
+        </ul>
+        <button class="button button_white-gray">Load more boats</button>
+    </section>
+</section>
+<footer class="footer">
+    <ul class="footer__top-locations"></ul>
+    <ul class="footer__featured-boats"></ul>
+    <p class="footer__subscribe-title"></p>
+    <form action="" class="form subscribe-form">
+        <input type="text" class="subscribe-form__input" id="subscribe" placeholder="Your email adress">
+        <label class="subscribe-form__label" for="subscribe">
+            <button class="button button_icon button_red">Subscribe</button>
+        </label>
+    </form>
+    <ul class="footer__contact-list"></ul>
+</footer>
 </body>
 </html>
