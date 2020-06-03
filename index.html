@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Dione dashboard</title>
+</head>
+<body>
+<div class="flex-container">
+    <aside class="sidebar-menu">
+        <div class="sidebar-menu__logo">
+            <img src="img/__header-img/ellipse-1.png" alt="logotype DIONE">
+        </div>
+        <nav class="sidebar-menu__nav">
+            <ul class="nav-list">
+                <li class="nav-list__item nav-list__item_dashboard">
+                    Dashboard
+                </li>
+
+                <li class="nav-list__item nav-list__item_feed">
+                    Feed
+                </li>
+
+                <li class="nav-list__item nav-list__item_statistics active">
+                    Statistics
+                </li>
+
+                <li class="nav-list__item nav-list__item_teams">
+                    Teams
+                </li>
+
+                <li class="nav-list__item nav-list__item_projects">
+                    Projects
+                </li>
+
+                <li class="nav-list__item nav-list__item_settings">
+                    Settings
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-menu__export">
+
+        </div>
+    </aside>
+    <main class="main">
+        <header class="main__header">
+            <h2 class="header__title side-in">Activity</h2>
+            <button class="button header__button">Create Project</button>
+            <ul class="header__notification">
+                <li class="notification__item notification__item_bell"></li>
+                <li class="notification__item notification__item_message"></li>
+            </ul>
+            <div class="header__profile">
+                <img src="img/__header-img/brad-pitt.jpg" alt="profile avatar" class="profile__img">
+                <p class="profile__name">Brad Pitt</p>
+            </div>
+        </header>
+        <section class="main__section">
+            <div class="statistics-section">
+                <div class="statistics-section__header">
+                    <div class="title__wraper">
+                    <h1 class="header__title">Lorem Stats</h1>
+                    <p class="header__date">September 15 – September 30</p>
+                    </div>
+                    <select class="header__select" name="type" type="select">
+                         <option value="notifications">Notifications</option>
+                         <option value="users">Users</option>
+                         <option value="comments">Comments</option>
+                         <option value="views">Views</option>  
+                    </select>
+                    <select class="header__select" name="sorting" type="select">
+                        <option value="notifications">Notifications</option>
+                         <option value="users">Users</option>
+                         <option value="comments" selected>Comments</option>
+                         <option value="views">Views</option>  
+                    </select>
+                </div>
+                <div class="statistics-section_chart">
+                    <div class="chart">
+                        <canvas  id="chart-01" width="960" height="400"  style="background-color:rgba(255,255,255,1.00);border-radius:0px;width:700px;height:400px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+                        <script> 
+                        function MoreChartOptions(){} var ChartData = {labels : ["January",
+                        "February","March","April","May","June","July",],datasets : [{fillColor :"rgba(52,152,219,1)",strokeColor : "rgba(52,152,219,0.5)",pointColor : "rgba(52,152,219,1)",markerShape :"circle",pointStrokeColor : "rgba(255,255,255,1)",data : [65,8,90,81,56,55,40,],title:"2013"},{fillColor :"rgba(46,204,113,1)",strokeColor : "rgba(46,204,113,1)",pointColor : "rgba(46,204,113,1)",markerShape :"circle",pointStrokeColor : "rgba(255,255,255,1)",data : [21,48,40,19,96,27,100,],title:"2014"},]};ChartOptions= {decimalSeparator:".",thousandSeparator:",",spaceLeft:12,spaceRight:12,spaceTop:12,spaceBottom:12,scaleLabel:"<%=value+''%>",yAxisMinimumInterval:1,scaleShowLabels:true,scaleShowLine:true,scaleLineStyle:"solid",scaleLineWidth:1,scaleLineColor:"rgba(0,0,0,0.6)",scaleOverlay :false,scaleOverride :false,scaleSteps:10,scaleStepWidth:10,scaleStartValue:0,legend:false,maxLegendCols:5,legendBlockSize:15,legendFillColor:'rgba(255,255,255,0.00)',legendColorIndicatorStrokeWidth:1,legendPosX:-2,legendPosY:4,legendXPadding:0,legendYPadding:0,legendBorders:false,legendBordersWidth:1,legendBordersStyle:"solid",legendBordersColors:"rgba(102,102,102,1)",legendBordersSpaceBefore:5,legendBordersSpaceLeft:5,legendBordersSpaceRight:5,legendBordersSpaceAfter:5,legendSpaceBeforeText:5,legendSpaceLeftText:5,legendSpaceRightText:5,legendSpaceAfterText:5,legendSpaceBetweenBoxAndText:5,legendSpaceBetweenTextHorizontal:5,legendSpaceBetweenTextVertical:5,legendFontFamily:"'Open Sans'",legendFontStyle:"normal normal",legendFontColor:"rgba(0,0,0,1)",legendFontSize:15,showYAxisMin:false,rotateLabels:"smart",xAxisBottom:true,yAxisLeft:true,yAxisRight:false,scaleFontFamily:"'Open Sans'",scaleFontStyle:"normal normal",scaleFontColor:"rgba(0,0,0,1)",scaleFontSize:12,pointLabelFontFamily:"'Open Sans'",pointLabelFontStyle:"normal normal",pointLabelFontColor:"rgba(102,102,102,1)",pointLabelFontSize:12,angleShowLineOut:true,angleLineStyle:"solid",angleLineWidth:1,angleLineColor:"rgba(0,0,0,0.1)",percentageInnerCutout:50,scaleShowGridLines:true,scaleGridLineStyle:"solid",scaleGridLineWidth:1,scaleGridLineColor:"rgba(0,0,0,0.1)",scaleXGridLinesStep:4,scaleYGridLinesStep:9,segmentShowStroke:true,segmentStrokeStyle:"solid",segmentStrokeWidth:2,segmentStrokeColor:"rgba(255,255,255,1.00)",datasetStroke:true,datasetFill : true,datasetStrokeStyle:"solid",datasetStrokeWidth:2,bezierCurve:true,bezierCurveTension :0.4,pointDotStrokeStyle:"solid",pointDotStrokeWidth : 1,pointDotRadius : 3,pointDot : true,scaleTickSizeBottom:5,scaleTickSizeTop:5,scaleTickSizeLeft:5,scaleTickSizeRight:5,graphMin:0,barShowStroke : false,barBorderRadius:0,barStrokeStyle:"solid",barStrokeWidth:1,barValueSpacing:15,barDatasetSpacing:0,scaleShowLabelBackdrop :true,scaleBackdropColor:'rgba(255,255,255,0.75)',scaleBackdropPaddingX :2,scaleBackdropPaddingY :2,animation : true,onAnimationComplete : function(){MoreChartOptions()}};
+                        DrawTheChart(ChartData,ChartOptions,"chart-01","Line");
+                        </script>
+                    </div>
+                </div>
+                <div class="statistics-section__stats">
+                    <ul class="stats-list">
+                        <li class="stats-list__item stats-list__item_users">
+                            <p class="item__title">Users</p>
+                            <p class="item__value item__value_users">3214</p> 
+                        </li>
+
+                        <li class="stats-list__item stats-list__item_notification">
+                            <p class="item__title">Notifications</p>
+                            <p class="item__value item__value_notifications">9848</p> 
+                        </li>
+
+                        <li class="stats-list__item stats-list__item_comments">
+                            <p class="item__title">Comments</p>
+                            <p class="item__value item__value_comments">1249</p> 
+                        </li>
+
+                        <li class="stats-list__item stats-list__item_views">
+                            <p class="item__title">Views</p>
+                            <p class="item__value item__value_views">321469</p> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <aside class="main__sidebar-personal">
+            
+            <div class="sidebar-personal__recent-activity">
+                <ul class="recent-activity-list">
+                    <li class="recent-activity-list__item"></li>
+                        <h3 class="sidebar-personal__title">Recents activity</h3>
+                    </li>
+                    <li class="recent-activity-list__item">
+                        <p class="user user_id-1 user-name">
+                            Angelina Jolie <br>
+                            <span class="user-name_activity">liked your post</span>
+                        </p>
+                    </li>
+                    <li class="recent-activity-list__item">
+                        <p class="user user_id-2 user-name">
+                            Bradley Cooper <br>
+                            <span class="user-name_activity">commented your profile</span>
+                        </p>
+                    </li>
+                    <li class="recent-activity-list__item">
+                        <p class="user user_id-3 user-name">
+                            Jenifer Anisto <br>
+                            <span class="user-name_activity">starded following you</span>
+                        </p>
+                    </li>
+                    <li class="recent-activity-list__item">
+                        <p class="user user_id-4 user-name">
+                            Hugh Lauri <br>
+                            <span class="user-name_activity">commented your profile</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-personal__team">
+                <ul class="team-list">
+                    <li class="team-list__item"></li>
+                        <h3 class="sidebar-personal__title">Your team</h3>
+                     </li>
+                    <li class="team-list__item">
+                        <p class="user user_id-1 user-name">
+                            Angelina Jolie <br>
+                            <span class="user-name_status">CEO&Founder</span>
+                        </p>
+                    </li>
+                    <li class="team-list__item">
+                        <p class="user user_id-2 user-name">
+                            Bradley Cooper <br>
+                            <span class="user-name_status">Social Media Specialist</span>
+                        </p>
+                    </li>
+                    <li class="team-list__item">
+                        <p class="user user_id-3 user-name">
+                            Jenifer Anisto <br>
+                            <span class="user-name_status">Moderator</span>
+                        </p>
+                    </li>
+                    <li class="team-list__item">
+                        <p class="user user_id-4 user-name">
+                            Hugh Lauri <br>
+                            <span class="user-name_status">Graphic Designer</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <button class="button button_gray">View more</button>
+        </aside>
+    </main>
+</div>
+
+        
+<script>
+        WebFontConfig = {
+        google: 
+    {families: ["Open Sans",]},active: function() { 
+        DrawTheChart(ChartData,ChartOptions,"chart-01","Line")}
+    };
+</script>
+<script asyn src="https://livegap.com/charts/js/webfont.js"></script>
+<script src="https://livegap.com/charts/js/Chart.min.js"></script>
+<script>
+    function DrawTheChart(ChartData,ChartOptions,ChartId,ChartType){
+    eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d")).'+ChartType+'(ChartData,ChartOptions);document.getElementById(ChartId).getContext("2d").stroke();')
+    }
+</script>   
+<script src='js/script.js'></script>
+</body>
+</html>
