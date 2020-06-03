@@ -160,7 +160,7 @@ body {
     top: 10px;
     margin-left: -15px;
     transform: rotate(45deg);
-    transition: all 0.25s ease-in;
+    transition: all 0.5s ease-in;
   }
   .side-in::before {
     transform: rotate(-45deg);
@@ -184,7 +184,7 @@ body {
   left: 50px;
   top: 5px;
   margin-left: -15px;
-  transition: all 0.25s ease-in;
+  transition: all 0.5s ease-in;
 }
 .side-in-hover::before {
   top: 18px;
@@ -192,7 +192,7 @@ body {
 .side-in-hover:hover::after,
 .side-in-hover:hover::before {
   background-color: deeppink;
-  transition: all 0.25s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 
